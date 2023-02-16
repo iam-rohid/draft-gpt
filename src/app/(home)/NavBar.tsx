@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import NavBarAvatar from "./NavBarAvatar";
 
 const NavBar = () => {
   return (
@@ -17,16 +18,19 @@ const NavBar = () => {
         </Link>
         <nav className="max-md:hidden">
           <Link
-            href="/tools"
+            href="/dashboard/tools"
             className="text-gray-600 hover:text-gray-900 mr-8"
           >
             Tools
           </Link>
-          <Link href="/chat" className="text-gray-600 hover:text-gray-900 mr-8">
+          <Link
+            href="/dashboard/chat"
+            className="text-gray-600 hover:text-gray-900 mr-8"
+          >
             Chat
           </Link>
           <Link
-            href="/playground"
+            href="/dashboard/playground"
             className="text-gray-600 hover:text-gray-900 mr-8"
           >
             Playground
@@ -62,6 +66,7 @@ const NavBar = () => {
               />
             </svg>
           </form>
+
           <Link
             href="/search"
             className="w-10 h-10 flex items-center justify-center mr-4 lg:hidden hover:bg-slate-100 rounded-lg"
@@ -81,12 +86,7 @@ const NavBar = () => {
               />
             </svg>
           </Link>
-          <Link
-            href="/signin"
-            className="bg-blue-500 text-white px-6 h-10 flex items-center rounded-lg hover:bg-blue-600 font-medium"
-          >
-            Sign In
-          </Link>
+          <NavBarAvatar />
         </div>
       </div>
     </header>
